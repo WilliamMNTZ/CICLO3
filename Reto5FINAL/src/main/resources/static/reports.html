@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-color:#2E86C1;
+        }
+        th, td {
+          text-align: center;
+        }
+        </style>
+         <link rel="icon" href="img/rentCar.png" type="image/png" sizes="16x16" />
+        <title>Renta Carros</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesRest.js"></script>
+        
+      </head>
+<body>
+    <h1>Reportes Reservaciones</h1>
+    
+    <button onclick="traerReporteStatus()"> Generar Reporte Status Reservaciones</button>
+    <div id="resultadoStatus"></div>
+    
+    <input type="date" id="RstarDate" placeholder="descripcion">
+    <input type="date" id="RdevolutionDate" placeholder="descripcion">
+    <button onclick="traerReporteDate()" class="ui purple button"> Generar Reporte por fecha </button>
+    <div id="resultadoDate"></div>
+
+    
+    <button onclick="traerReporteClientes()"> Generar Reporte Clientes y Cantidad de reservas por cliente </button>
+    <div id="resultadoClientes"></div>
+
+</body> 
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-color:#2E86C1;
+    }
+    th, td {
+      text-align: center;
+    }
+    </style>
+     <link rel="icon" href="img/rentCar.png" type="image/png" sizes="16x16" />
+    <title>Renta Carros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funcionesRest.js"></script>
+    
+  </head>
+
+  <body Onload="loadCar(), loadClient()">
+    <h2>Formulario Mensajes</h2>
+    <div id="resultadoConsulta"></div></br>
+    
+    <div>
+      <input type="text" id="messageText" placeholder="messagetext">
+      <select type="number" name="client" id="selectClient">
+        <option value="0">Seleccione un Cliente...</option>
+      </select>
+      <select type="number" name="car" id="selectCar">
+        <option value="0">Seleccione un Carro...</option>
+      </select>
+    </div></br></br>
+    <button onclick="consultAllMessage()">Consultar Mensajes</button>
+    <button onclick="saveMessage()">Guardar Mensaje</button>
+    <button onclick="updateInfoMsg()">Actualizar Mensaje</button>
+  </body>
+</html>

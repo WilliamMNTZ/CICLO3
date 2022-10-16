@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-color:#2E86C1;
+    }
+    th, td {
+      text-align: center;
+    }
+    </style>
+     <link rel="icon" href="img/rentCar.png" type="image/png" sizes="16x16" />
+    <title>Renta Carros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funcionesRest.js"></script>
+    
+  </head>
+
+  <body Onload="loadClient(), loadCar(), gamaLoad()">
+    <h2>Formulario Reservations</h2>
+    <div id="resultadoConsulta"></div></br>
+    
+    <div>
+      <input type="date" id="startDate" placeholder="startDate" format="yyyy-mm-dd">
+      <input type="date" id="devolutionDate" placeholder="devolutionDate" format="yyyy-mm-dd">
+      <select type="number" name="client" id="selectClient">
+        <option value="0">Seleccione un Cliente...</option>
+      </select>
+      <select type="number" name="car" id="selectCar">
+        <option value="0">Seleccione un Carro...</option>
+      </select>
+      <select type="text" id="selectStatus">
+        <option selected value="0">Seleccione un status...</option>
+        <option value="Programado">Programado</option>
+        <option value="Cancelado">Cancelado</option>
+        <option value="Realizado">Realizado</option>
+      </select>
+    </div></br></br>
+    <button onclick="consultAllReservation()">Consultar Reservaciones</button>
+    <button onclick="saveReservation()">Guardar Reservaciones</button>
+    <button onclick="updateInfoRes()">Actualizar Reservaciones</button>
+  </body>
+</html>

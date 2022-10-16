@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-color:#2E86C1;
+    }
+    th, td {
+      text-align: center;
+    }
+    </style>
+     <link rel="icon" href="img/rentCar.png" type="image/png" sizes="16x16" />
+    <title>Renta de Carros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funcionesRest.js"></script>
+    
+  </head>
+
+  <body Onload="loadReservation()">
+    <h2>Formulario Score</h2>
+    <div id="resultadoConsulta"></div></br>
+    
+    <div>
+      <select type="number" id="selectIdRes" placeholder="idReservation">
+        <option value="0">Seleccione una Reserva...</option>
+      </select>
+      <select type="number" id="score" placeholder="score">
+        <option value=6>Seleccione una Calificación...</option>
+        <option value=0>0</option>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+      <input type="text" id="message" placeholder="message">
+    </div></br></br>
+    <button onclick="consultAllScore()">Consultar Calificaciones</button>
+    <button onclick="saveScore()">Guardar Calificaciones</button>
+    <button onclick="updateInfoScore()">Actualizar Calificaciones</button>
+  </body>
+</html>
